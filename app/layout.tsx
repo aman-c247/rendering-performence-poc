@@ -1,23 +1,16 @@
-import "./globals.css";
-import type { Metadata } from "next";
+import type { ReactNode } from 'react'
 
-export const metadata: Metadata = {
-  title: "Rendering Performance POC",
-  description: "Layout thrashing vs batched DOM reads/writes vs compositor-only animation",
-};
+export const metadata = {
+  title: 'Viewport-based loading POC',
+  description: 'IntersectionObserver lazy loading with Next.js',
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/bad-thrashing">❌ Bad (Thrashing)</a>
-          <a href="/optimized">✅ Optimized (Batched + rAF)</a>
-          <a href="/composited">🚀 Best (Compositor-only)</a>
-        </nav>
+      <body style={{ fontFamily: 'system-ui, sans-serif', margin: 0 }}>
         {children}
       </body>
     </html>
-  );
+  )
 }
