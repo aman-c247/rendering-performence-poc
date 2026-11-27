@@ -5,7 +5,7 @@ import React, { Suspense, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 
-import { UseActionStatePOC } from "./02-use-action-state";
+import { UseActionStatePOC } from "./02-use-action-state.poc";
 import { UseDeferredValuePOC } from "./03-use-deferred-value.poc";
 import { SuspenseQueryPOC } from "./04-suspense-query.poc";
 import { OptimisticMutationPOC } from "./05-optimistic-mutation.poc";
